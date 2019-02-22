@@ -1,14 +1,54 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+header{
+  box-shadow: 0 0 10px 1px rgba(0,0,0,.9);
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.heading{
+  background-image: url("https://compass-ssl.xbox.com/assets/dc/48/dc486960-701e-421b-b145-70d04f3b85be.jpg?n=Game-Hub_Content-Placement-0_New-Releases-No-Copy_740x417_02.jpg");
+  height:200px;
+}
+
+.img-fluid{
+  height: 15vw;
+  object-fit: cover
+}
+
+.gameCard{
+  position: relative;
+}
+.gameCard img {
+  display: block;
+  width: 100%;
+  height: auto;  
+}
+.gameCardData{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color:rgba(0,0,0,.5);
+}
+
+.gameCard:hover .gameCardData {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.gameDataTitle{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
